@@ -39,7 +39,6 @@ import java.util.Map;
  * @see Migratable
  * @since 1.0.0
  */
-@SuppressWarnings("unused")
 public class Migrator {
 
     private final Field[] migratableFields;
