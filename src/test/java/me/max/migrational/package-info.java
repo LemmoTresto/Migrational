@@ -17,12 +17,13 @@
  */
 
 /**
- * This is the root package of the Migrational libary
- * {@link me.max.migrational.annotations} for all annotations
- * {@link me.max.migrational.exceptions} for all exceptions
- * {@link me.max.migrational.Migrator} should be instantiated to use this library
+ * This is the root package for testing migrational.
+ * This package contains all tests for migrating.
+ * These classes are made to not have to manually check if migration is still working.
+ * <p>
+ * The package {@link me.max.migrational.testobjects} contains all the test objects used by the test classes.
  *
  * @author Max Berkelmans
- * @since 1.0.0
+ * @since 1.1.0
  */
 package me.max.migrational;

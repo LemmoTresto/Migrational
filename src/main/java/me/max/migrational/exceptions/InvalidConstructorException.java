@@ -23,7 +23,7 @@ import java.lang.reflect.Constructor;
 /**
  * The exception to be thrown when the provided constructor is invalid
  * Cases of this happening is when the constructor was not found during instantiation
- * Calling {@link me.max.migrational.Migrator#migrate()} will then throw this exception
+ * Calling {@link me.max.migrational.Migrator#migrateToClass()} will then throw this exception
  * Another case is if the provided constructor in {@link me.max.migrational.Migrator#setConstructor(java.lang.reflect.Constructor)} has parameters
  * If this constructor is not of class which was passed on in instantiation it will also throw this exception.
  *

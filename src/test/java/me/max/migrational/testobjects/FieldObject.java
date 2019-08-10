@@ -16,13 +16,36 @@
  *
  */
 
+package me.max.migrational.testobjects;
+
+import me.max.migrational.annotations.Migratable;
+
 /**
- * This is the root package of the Migrational libary
- * {@link me.max.migrational.annotations} for all annotations
- * {@link me.max.migrational.exceptions} for all exceptions
- * {@link me.max.migrational.Migrator} should be instantiated to use this library
+ * This is a test object
+ * This test object is used to test the {@link Migratable} annotated fields.
+ * It will be migrated as a test.
  *
  * @author Max Berkelmans
- * @since 1.0.0
+ * @since 1.1.0
  */
-package me.max.migrational;
+public class FieldObject {
+
+    @Migratable(key = "name", defaultValue = "Max")
+    private String name = "Lily";
+    @Migratable
+    private int age;
+    @Migratable(defaultValue = "Netherlands")
+    private String country;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+}

@@ -6,7 +6,8 @@
 2. [Maven](https://github.com/LemmoTresto/Migrational/wiki#maven)
 3. [Gradle](https://github.com/LemmoTresto/Migrational/wiki#gradle)
 4. [Examples](https://github.com/LemmoTresto/Migrational/wiki#examples)
-5. [Support](#support)
+5. [Documentation](https://migrational.lemmotresto.com/javadocs)
+6. [Support](#support)
 
 
 

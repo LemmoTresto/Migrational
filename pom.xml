@@ -24,7 +24,7 @@
 
     <groupId>me.max</groupId>
     <artifactId>migrational</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>Migrational</name>
 
@@ -48,6 +48,7 @@
 
     <build>
         <finalName>${project.name}-${project.version}</finalName>
+        <defaultGoal>clean package</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -70,5 +71,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
 
 </project>
