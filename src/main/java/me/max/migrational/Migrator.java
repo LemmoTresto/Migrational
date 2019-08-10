@@ -130,7 +130,7 @@ public class Migrator {
     public Object migrateToClass() throws IllegalAccessException, InvocationTargetException, InstantiationException {
         //Check if the constructor is null due to not being found on instantiation
         if (constructor == null)
-            throw new InvalidConstructorException("Constructor provided was null, no matching constructor was found on instantiation make sure to set one.", constructor);
+            throw new InvalidConstructorException("Constructor provided was null, no matching constructor was found on instantiation make sure to set one.", null);
 
         //Create a new instance of the object
         lastMigratedObject = constructor.newInstance();
@@ -140,7 +140,9 @@ public class Migrator {
             Migratable migratable = getAnnotationFromField(field); //Get the annotation
             //Get correct key
             String key = (migratable.key().isEmpty()) ? field.getName() : migratable.key();
-            field.set(lastMigratedObject, migratedMap.get(key));
+            Object val = migratedMap.get(key);
+            if (val == null) continue;
+            field.set(lastMigratedObject, val);
         }
 
         return lastMigratedObject;
@@ -167,8 +169,11 @@ public class Migrator {
                 migratedMap.put(key, data.get(key));
                 continue;
             }
+
+            if (migratable.defaultValue().isEmpty()) continue;
+
             //It does not, so let's set the default value
-            migratedMap.put(key, migratable.defaultValue().isEmpty() ? data.get(key) : migratable.defaultValue());
+            migratedMap.put(key, migratable.defaultValue());
         }
 
         //Return the migrated map.
