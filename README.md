@@ -1,6 +1,6 @@
 # Migrational
 
-##### Migrational is a simple and small library which takes advantage of reflection to migrate data in objects.
+#### Migrational is a simple and small library which takes advantage of reflection to migrate data in objects.
 
 1. [Wiki](https://github.com/LemmoTresto/Migrational/wiki)
 2. [Maven](https://github.com/LemmoTresto/Migrational/wiki#maven)
